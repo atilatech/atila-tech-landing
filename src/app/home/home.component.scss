@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+@import '../../styles.scss';
 body {
   margin: 0;
 }
@@ -151,12 +151,12 @@ a img {
 }
 
 .android-drawer span.mdl-navigation__link.mdl-navigation__link {
-  color: #8bc34a;
+  color: $primary;
 }
 
 .android-drawer .mdl-layout-title {
   position: relative;
-  background: #6ab344;
+  background: $primary;
   height: 160px;
 }
 
@@ -229,6 +229,11 @@ a img {
   text-decoration: none;
 }
 
+.android-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
 
 .android-wear .android-screen-image {
   width: 40%;
@@ -283,6 +288,13 @@ a img {
   display: block;
   height: 300px;
   z-index: 1;
+}
+
+.android-wear-section {
+  position: relative;
+  background: url('../../assets/images/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
 }
 
 .android-wear-band {
