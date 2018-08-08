@@ -127,7 +127,7 @@
       <div class="col s12 m4" *ngFor="let member of TEAM_MEMBERS">
         <div class="card sticky-action" style="overflow: visible;">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" [src]=member.image>
+            <img class="activator" [src]=member.image style="height: 325px; width: auto">
             <!--<a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>-->
           </div>
           <div class="card-content">
@@ -136,7 +136,7 @@
             <p>{{member.shortBio}} <a href="#!">This is a link</a></p>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a href="#">LinkedIn</a> <a href="#">Profile</a>
           </div>
           <div class="card-reveal" style="display: none; transform: translateY(0%);">
             <span class="card-title grey-text text-darken-4">{{member.name}}<i class="material-icons right">close</i></span>
