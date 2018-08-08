@@ -9,25 +9,23 @@ export class HomeComponent implements OnInit {
 
   PROJECTS = [
     {
-      title: 'Smart Capsule',
+      title: 'Atila',
       image: '../../assets/images/more-from-1.png',
-      description: 'We Helped Canada 10X dynamics put together a price estimate on' +
-      ' launching a Hyperloop type device in Dubai.',
-      slug: 'smart-capsule',
+      description: 'Our flaship Product. A web app that allows students to automatically' +
+      ' find and apply to scholarships at the click of a button.',
+      projectUrl: 'https://atila.ca',
     },
     {
       title: 'Smart Capsule',
       image: '../../assets/images/more-from-2.png',
-      description: 'We Helped Canada 10X dynamics put together a price estimate on' +
-      ' launching a Hyperloop type device in Dubai.',
-      slug: 'smart-capsule',
+      description: 'Canada 10X Dynamics turned to Atila when they needed some mechanical and civil engineering research ' +
+      'for a cost estimate report on an innovative transportation mechanism.',
     },
     {
       title: 'Smart Capsule',
       image: '../../assets/images/more-from-3.png',
       description: 'We Helped Canada 10X dynamics put together a price estimate on' +
       ' launching a Hyperloop type device in Dubai.',
-      slug: 'smart-capsule',
     },
   ]
   TEAM_MEMBERS = [
