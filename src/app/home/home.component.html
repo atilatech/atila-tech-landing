@@ -52,20 +52,25 @@
       <div class="logo-font android-sub-slogan">You have a vision for a technology product or service. We build it and bring it to life for you.</div>
 
       <div class="row">
-        <form class="contact-form">
+        <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
 
           <mat-form-field class="col s12 m5" style="margin-left: 10%">
-            <textarea matInput placeholder="What do you need? How Can we help you?"></textarea>
+            <textarea matInput placeholder="What do you need? How Can we help you?" [(ngModel)]="contactData.message"
+            id="message" name="message"
+            ></textarea>
           </mat-form-field>
           <div class="col s12 m5">
             <!--How Can we Help:-->
             <div class="input-field inline">
-              <input id="email_phone_number" type="text" class="validate">
-              <label for="email_phone_number">Email or Phone Number</label>
+              <input id="email" name="email" type="email" class="validate"
+                     [(ngModel)]="contactData.email">
+              <label for="email">Email </label>
               <span class="helper-text" data-error="wrong" data-success="right">How can we Reach you?</span>
             </div>
           </div>
-          <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Send Message</button>
+          <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%" (click)="sendContactEmail(contactForm); false">
+            Send Message
+          </button>
         </form>
       </div>
 

@@ -6,10 +6,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatSnackBarModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
 import { MaterializeModule } from 'angular2-materialize';
+import {FormsModule} from '@angular/forms';
+import {AtilaApiService} from './_services/atila-api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,12 @@ import { MaterializeModule } from 'angular2-materialize';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MaterializeModule
+    MaterializeModule,
+    FormsModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [AtilaApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

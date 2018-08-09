@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AtilaApiService} from '../_services/atila-api.service';
+import {NgForm} from '@angular/forms';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +30,7 @@ export class HomeComponent implements OnInit {
       description: 'We Helped Canada 10X dynamics put together a price estimate on' +
       ' launching a Hyperloop type device in Dubai.',
     },
-  ]
+  ];
   TEAM_MEMBERS = [
     {
       name: 'Tomiwa Ademidun',
@@ -78,11 +81,49 @@ export class HomeComponent implements OnInit {
       linkedInUrl: 'https://linkedin.com/in/tademidun',
       profileUrl: 'https://atila.ca/profile/valkuz',
     },
-  ]
+  ];
 
-  constructor() { }
+  contactData = {
+    message: '',
+    email: ''
+  };
+
+  constructor(public atilaService: AtilaApiService,
+              public snackBar: MatSnackBar) {
+  }
 
   ngOnInit() {
+  }
+
+  sendContactEmail(contactForm: NgForm) {
+
+    console.log({contactForm});
+    if (!this.contactData.email.includes('@')) {
+      const snackBarRef = this.snackBar.open('Invalid Email', 'Clear Email', {duration: 3000});
+
+      snackBarRef.onAction().subscribe(() => {
+        this.contactData.email = '';
+      });
+
+      return;
+    }
+    const emailData = {
+      body: this.contactData.message,
+      from_email: this.contactData.email,
+      subject: 'Atila Tech Consulting Contact Form'
+    };
+
+    this.atilaService.sendEmail(emailData)
+      .subscribe(
+        res => {
+          console.log('res', res);
+        },
+        err => {
+          console.log('err', err);
+        }
+      );
+
+
   }
 
 }
