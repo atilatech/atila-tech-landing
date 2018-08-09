@@ -13,26 +13,26 @@ export class HomeComponent implements OnInit {
   PROJECTS = [
     {
       title: 'Atila',
-      image: '../../assets/projects/atila.jpg',
-      description: 'Our flaship Product. A web app that helps students automatically' +
+      image: '../../assets/images/projects/atila.jpg',
+      description: 'Our flaship Product. A web application that helps students automatically' +
       ' find and apply to scholarships in one click.',
       projectUrl: 'https://atila.ca',
     },
     {
       title: 'Smart Capsule',
-      image: '../../assets/projects/smart-capsule.jpg',
+      image: '../../assets/images/projects/smart-capsule.jpg',
       description: 'Canada 10X Dynamics turned to Atila when they needed some mechanical and civil engineering research ' +
       'for a cost estimate report on an innovative transportation mechanism in Dubai.',
     },
     {
       title: 'Phlock',
-      image: '../../assets/projects/phlock.jpg',
+      image: '../../assets/images/projects/phlock.jpg',
       description: 'An electronic device that helped users unlock doors using their Phone',
       projectUrl: 'http://phlock.ca',
     },
     {
       title: 'Austrian Quant',
-      image: '../../assets/projects/austrian-quant.jpg',
+      image: '../../assets/images/projects/austrian-quant.jpg',
       description: 'A machine learning trading algorithm which outperformed the SP500 over a 10 year period.',
       projectUrl: 'http://blog.tomiwa.ca/austrian-quant/',
     },
