@@ -13,22 +13,28 @@ export class HomeComponent implements OnInit {
   PROJECTS = [
     {
       title: 'Atila',
-      image: '../../assets/images/more-from-1.png',
+      image: '../../assets/projects/atila.jpg',
       description: 'Our flaship Product. A web app that helps students automatically' +
       ' find and apply to scholarships in one click.',
       projectUrl: 'https://atila.ca',
     },
     {
       title: 'Smart Capsule',
-      image: '../../assets/images/more-from-2.png',
+      image: '../../assets/projects/smart-capsule.jpg',
       description: 'Canada 10X Dynamics turned to Atila when they needed some mechanical and civil engineering research ' +
       'for a cost estimate report on an innovative transportation mechanism in Dubai.',
     },
     {
-      title: 'Smart Capsule',
-      image: '../../assets/images/more-from-3.png',
-      description: 'We Helped Canada 10X dynamics put together a price estimate on' +
-      ' launching a Hyperloop type device in Dubai.',
+      title: 'Phlock',
+      image: '../../assets/projects/phlock.jpg',
+      description: 'An electronic device that helped users unlock doors using their Phone',
+      projectUrl: 'http://phlock.ca',
+    },
+    {
+      title: 'Austrian Quant',
+      image: '../../assets/projects/austrian-quant.jpg',
+      description: 'A machine learning trading algorithm which outperformed the SP500 over a 10 year period.',
+      projectUrl: 'http://blog.tomiwa.ca/austrian-quant/',
     },
   ];
   TEAM_MEMBERS = [
@@ -50,7 +56,7 @@ export class HomeComponent implements OnInit {
       shortBio: 'Manpreet studied computer technology at Seneca College. \n' +
       'Manpreet also works at RBC as a software developer.',
       longBio: 'Senscational scenes',
-      linkedInUrl: 'https://linkedin.com/in/tademidun',
+      linkedInUrl: 'https://linkedin.com/in/matharumanpreet',
       profileUrl: 'https://atila.ca/profile/manpreet',
     },
     {
@@ -60,7 +66,18 @@ export class HomeComponent implements OnInit {
       shortBio: 'Kitan is currently enrolled in the dual degree computer engineering and business program at Ivey Business School \n' +
       'She also works at TD in the data science analytics group.',
       longBio: 'Senscational scenes',
-      linkedInUrl: 'https://linkedin.com/in/tademidun',
+      linkedInUrl: 'https://linkedin.com/in/kitan-ademidun-881330149/',
+      profileUrl: 'https://atila.ca/profile/orekitan',
+    },
+    {
+      name: 'Rahim Shamsy',
+      title: 'Engineering',
+      image: '../../assets/images/team/rahim.jpg',
+      shortBio: 'Rahim recently graduated from the civil engineering and business program at the Ivey Business School in Canada.' +
+      'After graduation, he plans to learn more about machine learning and blockchain technologies and apply those skills to help' +
+      ' the various industries in his home country of Tanzania.',
+      longBio: 'Sensational scenes',
+      linkedInUrl: 'https://linkedin.com/in/rahimshamsy',
       profileUrl: 'https://atila.ca/profile/orekitan',
     },
     {
@@ -69,16 +86,17 @@ export class HomeComponent implements OnInit {
       image: '../../assets/images/team/zion.jpg',
       shortBio: 'Zion studies computer science at Queen\'s University.',
       longBio: 'Senscational scenes',
-      linkedInUrl: 'https://linkedin.com/in/tademidun',
+      linkedInUrl: 'https://linkedin.com/in/zion-oginni-960a56146/',
       profileUrl: 'https://atila.ca/profile/zion',
     },
     {
       name: 'Valentin Kuznetcov',
       title: 'Engineering',
       image: '../../assets/images/team/valentine.jpg',
-      shortBio: 'Valentin studied at the Ivey Business School at Western University. He is currently the CFO of ${SomeCompany}.',
-      longBio: 'Senscational scenes',
-      linkedInUrl: 'https://linkedin.com/in/tademidun',
+      shortBio: 'Valentin studied at the Ivey Business School at Western University. ' +
+      'He is currently the CFO (NA) of in-lite Outdoor Lighting.',
+      longBio: 'Sensational scenes',
+      linkedInUrl: 'https://linkedin.com/in/valentin-kuznetcov/',
       profileUrl: 'https://atila.ca/profile/valkuz',
     },
   ];

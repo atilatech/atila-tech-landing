@@ -48,9 +48,12 @@
   <div class="android-content mdl-layout__content">
     <a name="top"></a>
     <div class="android-be-together-section mdl-typography--text-center">
+      <h1 style="margin: 0">
+      <div class="logo-font android-slogan atila-header">Atila
+        <span style="color: gray; font-size: 50px; font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif">Tech</span></div>
       <div class="logo-font android-slogan">Your Ideas. Brought To Life.</div>
       <div class="logo-font android-sub-slogan">You have a vision for a technology product or service. We build it and bring it to life for you.</div>
-
+      </h1>
       <div class="row">
         <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
 
@@ -62,15 +65,18 @@
           <div class="col s12 m5">
             <!--How Can we Help:-->
             <div class="input-field inline">
-              <input id="email" name="email" type="email" class="validate"
+              <input id="email" name="email" type="email" class="validate" style="background-color: white"
                      [(ngModel)]="contactData.email">
               <label for="email">Email </label>
               <span class="helper-text" data-error="wrong" data-success="right">How can we Reach you?</span>
             </div>
           </div>
-          <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%" (click)="sendContactEmail(contactForm); false">
-            Send Message
-          </button>
+          <div class="col s12">
+            <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%" (click)="sendContactEmail(contactForm); false">
+              Send Message
+            </button>
+          </div>
+
         </form>
       </div>
 
