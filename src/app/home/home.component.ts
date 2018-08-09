@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
       title: 'Atila',
       image: '../../assets/images/projects/atila.jpg',
       description: 'Our flaship Product. A web application that helps students automatically' +
-      ' find and apply to scholarships in one click.',
+      ' find and apply to scholarships in one click. Students can also learn and share stories, questions and answers on school, career and general life advice.',
       projectUrl: 'https://atila.ca',
     },
     {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'Phlock',
       image: '../../assets/images/projects/phlock.jpg',
-      description: 'An electronic device that helped users unlock doors using their Phone',
+      description: 'An electronic device that helps users unlock doors using their phone and digitally share keys with friends.',
       projectUrl: 'http://phlock.ca',
     },
     {
