@@ -2,3 +2,14 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 $primary: #194F87;
+
+$my-lighten:#4080ff;
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: $my-lighten;
+}
+
+::selection {
+  background-color: $my-lighten !important;
+  color: #fff;
+}

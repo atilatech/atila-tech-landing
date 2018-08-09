@@ -50,11 +50,23 @@
     <div class="android-be-together-section mdl-typography--text-center">
       <div class="logo-font android-slogan">Your Ideas. Brought To Life.</div>
       <div class="logo-font android-sub-slogan">You have a vision for a technology product or service. We build it and bring it to life for you.</div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Email or Phone Number">
-        </mat-form-field>
-      <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Contact Us </button>
+
+      <div class="row">
+        <form class="contact-form">
+
+          <mat-form-field class="col s12 m5" style="margin-left: 10%">
+            <textarea matInput placeholder="What do you need? How Can we help you?"></textarea>
+          </mat-form-field>
+          <div class="col s12 m5">
+            <!--How Can we Help:-->
+            <div class="input-field inline">
+              <input id="email_phone_number" type="text" class="validate">
+              <label for="email_phone_number">Email or Phone Number</label>
+              <span class="helper-text" data-error="wrong" data-success="right">How can we Reach you?</span>
+            </div>
+          </div>
+          <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Send Message</button>
+        </form>
       </div>
 
       <a href="#screens">
@@ -109,11 +121,16 @@
             <!--<a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>-->
           </div>
           <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{project.title}}<i class="material-icons right">more_vert</i></span>
-            <p>{{project.description}} <a href="#!">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">
+            <a [href]="project.projectUrl" target="_blank">
+              {{project.title}}
+            </a>
+            <i class="material-icons right">more_vert</i>
+          </span>
+            <p>{{project.description}} </p>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a [href]="project.projectUrl" target="_blank">View Project</a>
           </div>
           <div class="card-reveal" style="display: none; transform: translateY(0%);">
             <span class="card-title grey-text text-darken-4">{{project.title}}<i class="material-icons right">close</i></span>
@@ -130,13 +147,14 @@
             <img class="activator" [src]=member.image style="height: 325px; width: auto">
             <!--<a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>-->
           </div>
-          <div class="card-content">
+          <div class="card-content" style="height: 250px">
           <span class="card-title activator grey-text text-darken-4">{{member.name}}<i class="material-icons right">more_vert</i></span>
-          <span class="grey-text">{{member.title}}</span>
-            <p>{{member.shortBio}} <a href="#!">This is a link</a></p>
+          <span class="grey-text">{{member.title}}</span><br/>
+            <span class="inner-html" [innerHTML]="member.shortBio"></span>
           </div>
           <div class="card-action">
-            <a href="#">LinkedIn</a> <a href="#">Profile</a>
+            <a *ngIf="member.profileUrl" [href]="member.profileUrl" target="_blank">Profile</a>
+            <a [href]="member.linkedInUrl" target="_blank">LinkedIn</a>
           </div>
           <div class="card-reveal" style="display: none; transform: translateY(0%);">
             <span class="card-title grey-text text-darken-4">{{member.name}}<i class="material-icons right">close</i></span>
@@ -148,12 +166,15 @@
 
     <div class="android-more-section row" id="contact">
       <div class="android-section-title mdl-typography--display-1-color-contrast col s12">Contact us</div>
-      <form class="col s12">
-        <mat-form-field class="col s12 m6">
-          <textarea matInput placeholder="Leave a comment"></textarea>
+      <div class="col s12">
+        <mat-form-field>
+          <input matInput placeholder="Email or Phone Number">
         </mat-form-field>
-        <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Contact Us</button>
-      </form>
+        <mat-form-field>
+          <input matInput placeholder="Message">
+        </mat-form-field>
+        <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Send Message</button>
+      </div>
     </div>
 
     <footer class="android-footer mdl-mega-footer">
@@ -199,8 +220,8 @@
           <li class="mdl-menu__item">Android SDK</li>
           <li class="mdl-menu__item">Android for Work</li>
         </ul>
-        <a class="android-link mdl-typography--font-light" href="">Blog</a>
-        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+        <a class="android-link mdl-typography--font-light" href="https://atila.ca/blog">Blog</a>
+        <!--<a class="android-link mdl-typography&#45;&#45;font-light" href="">Privacy Policy</a>-->
       </div>
 
     </footer>
