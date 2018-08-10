@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 $primary: #194F87;
 
@@ -12,4 +12,11 @@ $my-lighten:#4080ff;
 ::selection {
   background-color: $my-lighten !important;
   color: #fff;
+}
+
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email][_ngcontent-c1]:not(.browser-default):focus:not([readonly]){
+  color: $my-lighten;
+  border-bottom: 1px solid $my-lighten;
+  box-shadow: 0 1px 0 0 $my-lighten;
 }

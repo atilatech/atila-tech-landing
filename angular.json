@@ -28,6 +28,7 @@
               "src/manifest.json"
             ],
             "styles": [
+              "src/atila-theme.scss",
               "src/styles.scss",
               "./node_modules/materialize-css/dist/css/materialize.css"
             ],

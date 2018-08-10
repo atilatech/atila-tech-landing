@@ -7,5 +7,6 @@ deploy () {
  git push ;
  ng build --prod;
 
- aws s3 sync dist/ s3://tech.atila.ca
+ aws s3 sync dist/ s3://tech.atila.ca;
+ aws cloudfront create-invalidation --distribution-id EZ8XIMBLMQKJN --paths "/*";
 }

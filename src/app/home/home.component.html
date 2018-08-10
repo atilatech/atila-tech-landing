@@ -175,17 +175,32 @@
       </div>
     </div>
 
-    <div class="android-more-section row" id="contact">
+    <div class="android-more-section android-be-together-section row" id="contact">
       <div class="android-section-title mdl-typography--display-1-color-contrast col s12">Contact us</div>
-      <div class="col s12">
-        <mat-form-field>
-          <input matInput placeholder="Email or Phone Number">
+      <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
+
+        <mat-form-field class="col s12 m5" style="margin-left: 10%">
+            <textarea matInput placeholder="What do you need? How Can we help you?" [(ngModel)]="contactData.message"
+                      id="message" name="message"
+            ></textarea>
         </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Message">
-        </mat-form-field>
-        <button mat-raised-button style="background-color: #4080ff; color: white; margin: 1%">Send Message</button>
-      </div>
+        <div class="col s12 m5">
+          <!--How Can we Help:-->
+          <div class="input-field inline">
+            <input id="email" name="email" type="email" class="validate" style="background-color: white"
+                   [(ngModel)]="contactData.email">
+            <label for="email">Email </label>
+            <span class="helper-text" data-error="wrong" data-success="right">How can we Reach you?</span>
+          </div>
+        </div>
+        <div class="col s12">
+          <button class="col offset-m6" mat-raised-button style="background-color: #4080ff; color: white;margin-top: 1%;margin-bottom: 1%;"
+                  (click)="sendContactEmail(contactForm); false">
+            Send Message
+          </button>
+        </div>
+
+      </form>
     </div>
 
     <footer class="android-footer mdl-mega-footer">
@@ -231,7 +246,7 @@
           <li class="mdl-menu__item">Android SDK</li>
           <li class="mdl-menu__item">Android for Work</li>
         </ul>
-        <a class="android-link mdl-typography--font-light" href="https://atila.ca/blog">Blog</a>
+        <a class="android-link mdl-typography--font-light" href="https://atila.ca/blog" target="_blank">Blog</a>
         <!--<a class="android-link mdl-typography&#45;&#45;font-light" href="">Privacy Policy</a>-->
       </div>
 
