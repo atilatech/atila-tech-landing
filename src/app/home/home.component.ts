@@ -74,8 +74,8 @@ export class HomeComponent implements OnInit {
       title: 'Engineering',
       image: '../../assets/images/team/rahim.jpg',
       shortBio: 'Rahim recently graduated from the civil engineering and business program at the Ivey Business School in Canada.' +
-      'After graduation, he plans to learn more about machine learning and blockchain technologies and apply those skills to help' +
-      ' the various industries in his home country of Tanzania.',
+      'After graduation, he plans to learn more about machine learning and blockchain and apply those skills to help' +
+      ' various industries in his home country of Tanzania.',
       longBio: 'Sensational scenes',
       linkedInUrl: 'https://linkedin.com/in/rahimshamsy',
       profileUrl: 'https://atila.ca/profile/orekitan',
@@ -84,7 +84,8 @@ export class HomeComponent implements OnInit {
       name: 'Zion Oginni',
       title: 'Engineering',
       image: '../../assets/images/team/zion.jpg',
-      shortBio: 'Zion studies computer science at Queen\'s University.',
+      shortBio: 'Zion studies computer science at Queen\'s University.' +
+      ' He is interested in using software and technology to solve problems in the healthcare space',
       longBio: 'Senscational scenes',
       linkedInUrl: 'https://linkedin.com/in/zion-oginni-960a56146/',
       profileUrl: 'https://atila.ca/profile/zion',
