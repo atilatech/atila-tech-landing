@@ -12,11 +12,17 @@ import {MaterializeModule} from 'angular2-materialize';
 import {FormsModule} from '@angular/forms';
 import {AtilaApiService} from './_services/atila-api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ProjectsComponent } from './projects/projects.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectsComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -29,10 +35,12 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [AtilaApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {

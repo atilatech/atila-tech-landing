@@ -20,3 +20,7 @@ input[type=email][_ngcontent-c1]:not(.browser-default):focus:not([readonly]){
   border-bottom: 1px solid $my-lighten;
   box-shadow: 0 1px 0 0 $my-lighten;
 }
+
+blockquote {
+  border-left-color: $my-lighten !important;
+}

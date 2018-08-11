@@ -1,0 +1,71 @@
+<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+  <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button">
+    <i class="material-icons">menu</i>
+  </div>
+  <div class="mdl-layout__header-row">
+    <a routerLink="">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="../../assets/images/atila-logo.png">
+          </span>
+    </a>
+    <!-- Add spacer, to align navigation to the right in desktop -->
+    <div class="android-header-spacer mdl-layout-spacer"></div>
+    <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width"
+         style="padding: 0"
+    >
+      <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+        <i class="material-icons">search</i>
+      </label>
+      <div class="mdl-textfield__expandable-holder">
+        <input class="mdl-textfield__input" type="text" id="search-field">
+      </div>
+    </div>
+    <!-- Navigation -->
+    <div class="android-navigation-container">
+        <span class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" [routerLink]="''" fragment="projects">Projects</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" [routerLink]="''" fragment="team">Team</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" [routerLink]="''" fragment="contact">Contact Us</a>
+        </span>
+    </div>
+    <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="../../assets/images/atila-logo.png">
+          </span>
+  </div>
+</div>
+<div class="container">
+
+  <div class="row">
+    <span class="col s12">
+    <h3 style="text-align: center; "> {{project.title}} </h3>
+  </span>
+
+      <a href="https://atila.ca/profile/tomiwa" target="_blank">
+        <div class="chip"  style="margin: 3%">
+          <img alt="Blog Author" src="https://firebasestorage.googleapis.com/v0/b/atila-7.appspot.com/o/user-profiles%2F1%2Fprofile-pictures%2Ffacebook-profile-picture.jpg?alt=media&amp;token=8754c657-bbdc-4d8e-ae1d-d4047ac09c6d">
+          <a href="https://atila.ca/profile/tomiwa" target="_blank">
+            Tomiwa Ademidun
+          </a>
+        </div>
+      </a>
+
+
+    <div class="s12">
+
+      <div *ngIf="project.slug=='atila'">
+        <div class="blog-text inner-html" [innerHTML]="project.body | safeHtml"></div>
+      </div>
+      <div *ngIf="project.slug!='atila'">
+        <div>
+          <h3>Project Not Found :(</h3><br>
+          <a routerLink="''"><h5>Return to Atila Tech</h5></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

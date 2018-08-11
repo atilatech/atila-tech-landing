@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
       description: 'Our flaship Product. A web application that helps students automatically' +
       ' find and apply to scholarships in one click. Students can also learn and share stories, questions and answers on school, career and general life advice.',
       projectUrl: 'https://atila.ca',
+      caseStudySlug: 'atila',
     },
     {
       title: 'Smart Capsule',

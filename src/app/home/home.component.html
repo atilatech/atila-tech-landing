@@ -142,6 +142,7 @@
           </div>
           <div class="card-action">
             <a [href]="project.projectUrl" target="_blank">View Project</a>
+            <a *ngIf="project.caseStudySlug" [routerLink]="['projects', project.caseStudySlug]">Case Study</a>
           </div>
           <div class="card-reveal" style="display: none; transform: translateY(0%);">
             <span class="card-title grey-text text-darken-4">{{project.title}}<i class="material-icons right">close</i></span>
@@ -299,4 +300,4 @@
     </footer>
   </div>
 </div>
-<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+<!--<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-color&#45;&#45;accent mdl-color-text&#45;&#45;accent-contrast">View Source</a>-->
