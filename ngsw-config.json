@@ -13,7 +13,9 @@
       "urls": [
         "https://firebasestorage.googleapis.com/v0/b/atila-7.appspot.com/o/user-profiles%2F1%2Fprofile-pictures%2Ffacebook-profile-picture.jpg?alt=media&token=8754c657-bbdc-4d8e-ae1d-d4047ac09c6d",
         "https://i0.wp.com/blog.tomiwa.ca/wp-content/uploads/2018/03/atila-tech-stack.png?resize=700%2C436",
-        "https://i2.wp.com/blog.tomiwa.ca/wp-content/uploads/2018/03/angular-material-html-bloat.png?resize=700%2C318"
+        "https://i2.wp.com/blog.tomiwa.ca/wp-content/uploads/2018/03/angular-material-html-bloat.png?resize=700%2C318",
+        "https://atila-7.herokuapp.com/api/blog/blog-slug/tomiwa/why-we-chose-angular-over-react-and-django-over-ruby-on-rails-for-atila-the-essential-software-startup-techstack/",
+        "https://api.myjson.com/bins/18mldc"
       ]
 
     }
@@ -26,5 +28,20 @@
         "/assets/**"
       ]
     }
-  }]
+  }],
+  "dataGroups": [
+    {
+      "name": "atila.ca",
+      "urls": [
+        "https://atila-7.herokuapp.com/api/**",
+        "https://api.myjson.com/bins/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 3,
+        "maxAge": "7d",
+        "strategy": "freshness"
+      }
+    }
+  ]
 }
+
