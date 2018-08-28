@@ -9,7 +9,13 @@
         "/index.html",
         "/*.css",
         "/*.js"
+      ],
+      "urls": [
+        "https://firebasestorage.googleapis.com/v0/b/atila-7.appspot.com/o/user-profiles%2F1%2Fprofile-pictures%2Ffacebook-profile-picture.jpg?alt=media&token=8754c657-bbdc-4d8e-ae1d-d4047ac09c6d",
+        "https://i0.wp.com/blog.tomiwa.ca/wp-content/uploads/2018/03/atila-tech-stack.png?resize=700%2C436",
+        "https://i2.wp.com/blog.tomiwa.ca/wp-content/uploads/2018/03/angular-material-html-bloat.png?resize=700%2C318"
       ]
+
     }
   }, {
     "name": "assets",

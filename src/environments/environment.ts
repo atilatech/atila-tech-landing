@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/',
+  microServicesApiUrl: 'http://localhost:5000/',
+  atilaServerApiUrl: 'https://atila-7.herokuapp.com/api/',
 };
 
 /*

@@ -49,10 +49,10 @@
 
     <div class="s12">
 
-      <div *ngIf="project.slug=='atila'">
+      <div *ngIf="approvedSlugs.includes(project.slug)">
         <div class="blog-text inner-html" [innerHTML]="project.body | safeHtml"></div>
       </div>
-      <div *ngIf="project.slug!='atila'">
+      <div *ngIf="!approvedSlugs.includes(project.slug)">
         <div>
           <h3>Project Not Found :(</h3><br>
           <a routerLink="''"><h5>Return to Atila Tech</h5></a>
