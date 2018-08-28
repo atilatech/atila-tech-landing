@@ -1,34 +1,40 @@
-import { Component } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
-import { merge, Observable, of, Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { environment } from '../environments/environment';
+import {Component, OnInit} from '@angular/core';
+import {SwUpdate} from '@angular/service-worker';
+import {MatSnackBar} from '@angular/material';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
-  updateAvailable$: Observable<boolean>;
-  closed$ = new Subject<void>();
 
-  constructor(private swUpdate: SwUpdate) {
-    this.updateAvailable$ = merge(
-      of(false),
-      this.swUpdate.available.pipe(map(() => true)),
-      this.closed$.pipe(map(() => false)),
-    );
+  constructor(private swUpdate: SwUpdate,
+              public snackBar: MatSnackBar) {
   }
 
-  activateUpdate() {
+  ngOnInit() {
     if (environment.production) {
-      this.swUpdate.activateUpdate().then(() => {
-        location.reload(true);
-      });
+
+      // check service worker to see if new version of app is available
+      if (this.swUpdate.isEnabled) {
+
+        this.swUpdate.available.subscribe(() => {
+
+          const snackBarRef = this.snackBar.open('New version available', 'Load New Version');
+
+          snackBarRef.onAction().subscribe(
+            () => {
+              location.reload();
+            }
+          );
+
+        });
+      }
     }
   }
-
-
 }
+
+
