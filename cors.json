@@ -1,0 +1,15 @@
+[
+  {
+    "origin": [
+      "https://tech.atila.ca",
+      "https://atila.ca"
+    ],
+    "method": ["GET"],
+    "fooBar": {
+      "answers": "https://stackoverflow.com/questions/37760695/firebase-storage-and-access-control-allow-origin",
+      "usefulComment": "https://stackoverflow.com/questions/37760695/firebase-storage-and-access-control-allow-origin#comment82512170_37765371",
+      "command": "gsutil cors set cors.json gs://atila-7.appspot.com"
+    },
+    "maxAgeSeconds": 8938800
+  }
+]
