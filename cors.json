@@ -2,7 +2,8 @@
   {
     "origin": [
       "https://tech.atila.ca",
-      "https://atila.ca"
+      "https://atila.ca",
+      "https://demo.atila.ca"
     ],
     "method": ["GET"],
     "fooBar": {
