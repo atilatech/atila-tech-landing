@@ -52,12 +52,14 @@
       <div class="logo-font android-slogan atila-header">Atila
         <span style="color: gray; font-size: 50px; font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif">Tech</span></div>
       <div class="logo-font android-slogan">Your Ideas. Brought To Life.</div>
-      <div class="logo-font android-sub-slogan">You have a vision for a technology product or service. We build it and bring it to life for you.</div>
+      <div class="logo-font android-sub-slogan">You have a vision for a technology product or service.
+        <br>
+        We build it and bring it to life for you.</div>
       </h1>
       <div class="row">
         <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
 
-          <mat-form-field class="col s12 m5" style="margin-left: 10%">
+          <mat-form-field class="col s10 m5" style="margin-left: 10%">
             <textarea matInput placeholder="What do you need? How Can we help you?" [(ngModel)]="contactData.message"
             id="message" name="message"
             ></textarea>
