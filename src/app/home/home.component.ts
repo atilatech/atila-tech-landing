@@ -51,6 +51,27 @@ export class HomeComponent implements OnInit {
       profileUrl: 'https://atila.ca/profile/tomiwa',
     },
     {
+      name: 'Valentin Kuznetcov',
+      title: 'Engineering',
+      image: '../../assets/images/team/valentine.jpg',
+      shortBio: 'Valentin studied at the Ivey Business School at Western University. ' +
+      'He is currently the CFO (NA) of in-lite Outdoor Lighting.',
+      longBio: 'Sensational scenes',
+      linkedInUrl: 'https://linkedin.com/in/valentin-kuznetcov/',
+      profileUrl: 'https://atila.ca/profile/valkuz',
+    },
+    {
+      name: 'Rahim Shamsy',
+      title: 'Engineering',
+      image: '../../assets/images/team/rahim.jpg',
+      shortBio: 'Rahim recently graduated from the civil engineering and business program at the Ivey Business School in Canada.' +
+      'After graduation, he plans to learn more about machine learning and blockchain and apply those skills to help' +
+      ' various industries in his home country of Tanzania.',
+      longBio: 'Sensational scenes',
+      linkedInUrl: 'https://linkedin.com/in/rahimshamsy',
+      profileUrl: 'https://atila.ca/profile/orekitan',
+    },
+    {
       name: 'Manpreet Matharu',
       title: 'Engineering',
       image: '../../assets/images/team/manpreet.jpg',
@@ -71,17 +92,6 @@ export class HomeComponent implements OnInit {
       profileUrl: 'https://atila.ca/profile/orekitan',
     },
     {
-      name: 'Rahim Shamsy',
-      title: 'Engineering',
-      image: '../../assets/images/team/rahim.jpg',
-      shortBio: 'Rahim recently graduated from the civil engineering and business program at the Ivey Business School in Canada.' +
-      'After graduation, he plans to learn more about machine learning and blockchain and apply those skills to help' +
-      ' various industries in his home country of Tanzania.',
-      longBio: 'Sensational scenes',
-      linkedInUrl: 'https://linkedin.com/in/rahimshamsy',
-      profileUrl: 'https://atila.ca/profile/orekitan',
-    },
-    {
       name: 'Zion Oginni',
       title: 'Engineering',
       image: '../../assets/images/team/zion.jpg',
@@ -90,16 +100,6 @@ export class HomeComponent implements OnInit {
       longBio: 'Senscational scenes',
       linkedInUrl: 'https://linkedin.com/in/zion-oginni-960a56146/',
       profileUrl: 'https://atila.ca/profile/zion',
-    },
-    {
-      name: 'Valentin Kuznetcov',
-      title: 'Engineering',
-      image: '../../assets/images/team/valentine.jpg',
-      shortBio: 'Valentin studied at the Ivey Business School at Western University. ' +
-      'He is currently the CFO (NA) of in-lite Outdoor Lighting.',
-      longBio: 'Sensational scenes',
-      linkedInUrl: 'https://linkedin.com/in/valentin-kuznetcov/',
-      profileUrl: 'https://atila.ca/profile/valkuz',
     },
   ];
 
