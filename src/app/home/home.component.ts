@@ -137,9 +137,17 @@ export class HomeComponent implements OnInit {
       .subscribe(
         res => {
           console.log('res', res);
+          console.log('res.toString()', res.toString());
+          console.log('JSON', JSON.stringify(res));
+
+          this.snackBar.open('Your Email was Sent Successfully.', '', {duration: 3000});
         },
         err => {
           console.log('err', err);
+
+          console.log('err.toString()', err.toString());
+          console.log('JSON', JSON.stringify(err));
+          this.snackBar.open('Error sending your email. Try again or email info@atila.ca', '', {duration: 5000});
         }
       );
 
