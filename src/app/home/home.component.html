@@ -177,7 +177,7 @@
         </div>
       </div>
 
-      <p style="font-size: larger" class="col-sm-12 col-md-8 offset-md-d-2">
+      <p style="font-size: larger" class="col s12">
         If you would like to join the team or help out in some way,
         <a  href="mailto:info@atila.ca">send an email </a> to <a  href="mailto:info@atila.ca">info@atila.ca</a> with your resume and/or links to cool stuff you've done.
 
@@ -193,7 +193,7 @@
       <div class="android-section-title mdl-typography--display-1-color-contrast col s12" style="text-align: center">Contact us</div>
       <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendContactEmail(contactForm)">
 
-        <mat-form-field class="col s12 m5" style="margin-left: 10%">
+        <mat-form-field class="col s12 m5 offset-m2" style="margin-left: 10%">
             <textarea matInput placeholder="What do you need? How Can we help you?" [(ngModel)]="contactData.message"
                       id="message" name="message"
             ></textarea>
