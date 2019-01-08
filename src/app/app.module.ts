@@ -16,13 +16,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { SafeHtmlPipe } from './_pipes/safe-html.pipe';
 import {RouterModule} from '@angular/router';
+import { HomeAlternateComponent } from './home-alternate/home-alternate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectsComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    HomeAlternateComponent
   ],
   imports: [
     BrowserModule,
