@@ -41,21 +41,19 @@ function copyImages() {
     .pipe(gulp.dest('build/img'))
 }
 
-/*
-
-gulp.task('minify-main', function() {
-  return gulp.src([
+function minifyMainTask() {
     /!* Add your JS files here, they will be combined in this order *!/
+  return gulp.src([
     'js/main.js'
-    ])
+  ])
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('js'));
-});
+    .pipe(gulp.dest('build/js'));
+}
 
 /!* Sass task *!/
-gulp.task('sass', function () {
-    gulp.src('scss/style.scss')
+function sassTask() {
+  gulp.src('scss/style.scss')
     .pipe(plumber())
     .pipe(sass({
       errLogToConsole: true,
@@ -69,45 +67,23 @@ gulp.task('sass', function () {
 
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
+      browsers: ['last 2 versions'],
+      cascade: false
     }))
     .pipe(gulp.dest('css'))
 
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('css'))
-    /!* Reload the browser CSS after every change *!/
-    .pipe(reload({stream:true}));
-});
+    .pipe(gulp.dest('build/css'))
+.pipe(reload({stream:true}));
 
-gulp.task('merge-styles', function () {
+  /!* Reload the browser CSS after every change *!/
+};
 
-    return gulp.src([
-        'css/vendor/bootstrap.min.css',
-        'css/vendor/animate.css',
-        'css/vendor/icomoon.css',
-        'css/vendor/flexslider.css',
-        'css/vendor/owl.carousel.min.css',
-        'css/vendor/owl.theme.default.min.css',
-        'css/vendor/magnific-popup.css',
-        'css/vendor/photoswipe.css',
-        'css/vendor/default-skin.css',
-        'fonts/icomoon/style.css',
-        ])
-        // .pipe(sourcemaps.init())
-        // .pipe(autoprefixer({
-        //     browsers: ['last 2 versions'],
-        //     cascade: false
-        // }))
-        .pipe(concat('styles-merged.css'))
-        .pipe(gulp.dest('css'))
-        // .pipe(rename({suffix: '.min'}))
-        // .pipe(minifycss())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('css'))
-        .pipe(reload({stream:true}));
-});
+/*
+
+
+
 
 /!* Reload task *!/
 gulp.task('bs-reload', function () {
@@ -152,9 +128,11 @@ function connectTask() {
 exports.connect = connectTask;
 
 exports.default = series(
-  scriptsTask,
   parallel(
+  scriptsTask,
     copyHtml,
-    copyImages
+    copyImages,
+    sassTask,
+    minifyMainTask,
   )
 );
