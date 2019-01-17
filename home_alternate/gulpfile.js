@@ -12,35 +12,36 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const { series, parallel } = require('gulp');
 
 /* Setup scss path */
 var paths = {
     scss: './sass/*.scss'
 };
 
-/*
-/!* Scripts task *!/
-gulp.task('scripts', function() {
-  return gulp.src([
+function scriptsTask() {
     /!* Add your JS files here, they will be combined in this order *!/
-    'js/vendor/jquery.min.js',
-    'js/vendor/jquery.easing.1.3.js',
-    'js/vendor/jquery.stellar.min.js',
-    'js/vendor/jquery.flexslider-min.js',
-    'js/vendor/jquery.countTo.js',
-    'js/vendor/jquery.appear.min.js',
-    'js/vendor/circle-progress.min.js',
-    'js/vendor/jquery.magnific-popup.min.js',
-    'js/vendor/owl.carousel.min.js',
-    'js/vendor/bootstrap.min.js',
-    'js/vendor/jquery.waypoints.min.js'
-    ])
+  return gulp.src([
+    'js/vendor/*.js'
+  ])
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/js'))
+    .pipe(rename({ extname: '.min.js' }))
     .pipe(uglify())
-    .pipe(gulp.dest('js'));
-});
+    .pipe(gulp.dest('build/js'));
+}
+
+function copyHtml() {
+  return gulp.src('index.html')
+         .pipe(gulp.dest('build'))
+}
+
+function copyImages() {
+  return gulp.src('img/*')
+    .pipe(gulp.dest('build/img'))
+}
+
+/*
 
 gulp.task('minify-main', function() {
   return gulp.src([
@@ -149,3 +150,11 @@ function connectTask() {
 }
 
 exports.connect = connectTask;
+
+exports.default = series(
+  scriptsTask,
+  parallel(
+    copyHtml,
+    copyImages
+  )
+);
