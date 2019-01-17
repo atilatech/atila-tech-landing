@@ -38,7 +38,9 @@
 	}
 
 	var nextScroll = function() {
+
 		$('.js-next').on('click', function(e){
+      console.log('nextScroll');
 			e.preventDefault();
 			$('html, body').animate({
       	scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -59,11 +61,28 @@
 		});
 	}
 
+	var scrollToDiv = function() {
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .on('click', function(e){
+                console.log('nextScroll');
+                console.log('e', e);
+                e.preventDefault();
+                console.log('this', this);
+                console.log('$.attr(this, \'href\')', $.attr(this, 'href'));
+
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 700, 'easeInOutExpo');
+            });
+    }
 	/*----------------------------------------
 		Burger Menu
-	----------------------------------------*/	
+	----------------------------------------*/
 	var mobileMenuControl = function() {
-		
+
 
 		// click burger menu
 		$('.probootstrap-burger-menu').on('click', function(e){
@@ -97,7 +116,7 @@
 		// Click outside of the Mobile Menu content
 		$(document).click(function (e) {
 	    var container = $(".probootstrap-nav, .probootstrap-burger-menu");
-	    
+
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
 	      if ( $('body').hasClass('show') ) {
 					$('body').removeClass('show');
@@ -105,7 +124,7 @@
 				}
 	    }
 		});
-		
+
 
 	};
 
@@ -199,7 +218,7 @@
 	    autoplay: true,
 	    autoplayTimeout:2000,
 	    autoplayHoverPause:true,
-			navText: [	
+			navText: [
 				"<i class='icon-chevron-thin-left'></i>",
 				"<i class='icon-chevron-thin-right'></i>"
 			],
@@ -230,7 +249,7 @@
 		});
 	};
 
-	
+
 	/*----------------------------------------
 		Slider
 	----------------------------------------*/
@@ -243,7 +262,7 @@
 	  });
 	}
 
-	
+
 	/*----------------------------------------
 		Content Animation
 	----------------------------------------*/
@@ -252,7 +271,7 @@
 		$('.probootstrap-animate').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('probootstrap-animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -274,15 +293,15 @@
 							el.removeClass('item-animate');
 						},  k * 200, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '95%' } );
 	};
 
-	
+
 
 	/*----------------------------------------
 		Counter Animation
@@ -297,9 +316,9 @@
 	var counterWayPoint = function() {
 		if ($('#probootstrap-counter').length > 0 ) {
 			$('#probootstrap-counter').waypoint( function( direction ) {
-										
+
 				if( direction === 'down' && !$(this.element).hasClass('probootstrap-animated') ) {
-					setTimeout( counter , 400);					
+					setTimeout( counter , 400);
 					$(this.element).addClass('probootstrap-animated');
 				}
 			} , { offset: '90%' } );
@@ -382,18 +401,20 @@
               var percent = current_item.data('percent');
               current_item.append('<span>' + percent + '%' + '</span>').css('width', percent + '%').addClass('appeared');
           }
-          
+
       });
     };
 	}
 
 	/*----------------------------------------
-		Document Ready 
+		Document Ready
 	----------------------------------------*/
 	$(document).ready(function(){
 		menuHover();
 		counterWayPoint();
 		contentWayPoint();
+		console.log('scrollToDiv',scrollToDiv);
+        scrollToDiv();
 		backToTop();
 		searchControl();
 		magnificPopupControl();
@@ -408,6 +429,6 @@
 		flexSlider();
 	});
 
-	
+
 
 })();
