@@ -53,7 +53,7 @@ function minifyMainTask() {
 
 /!* Sass task *!/
 function sassTask() {
-  gulp.src('scss/style.scss')
+  return gulp.src('scss/style.scss')
     .pipe(plumber())
     .pipe(sass({
       errLogToConsole: true,
@@ -79,6 +79,34 @@ function sassTask() {
 
   /!* Reload the browser CSS after every change *!/
 };
+
+function mergeStylesTask() {
+
+  return gulp.src([
+    'css/vendor/bootstrap.min.css',
+    'css/vendor/animate.css',
+    'css/vendor/icomoon.css',
+    'css/vendor/flexslider.css',
+    'css/vendor/owl.carousel.min.css',
+    'css/vendor/owl.theme.default.min.css',
+    'css/vendor/magnific-popup.css',
+    'css/vendor/photoswipe.css',
+    'css/vendor/default-skin.css',
+    'fonts/icomoon/style.css',
+  ], { allowEmpty: true })
+  // .pipe(sourcemaps.init())
+  // .pipe(autoprefixer({
+  //     browsers: ['last 2 versions'],
+  //     cascade: false
+  // }))
+    .pipe(concat('styles-merged.css'))
+    .pipe(gulp.dest('build/css'))
+    // .pipe(rename({suffix: '.min'}))
+    // .pipe(minifycss())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(reload({stream:true}));
+}
 
 /*
 
@@ -133,6 +161,7 @@ exports.default = series(
     copyHtml,
     copyImages,
     sassTask,
+    mergeStylesTask,
     minifyMainTask,
   )
 );
