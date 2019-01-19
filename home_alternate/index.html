@@ -41,6 +41,11 @@
     <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/atila-7.appspot.com/o/public%2Fatila-tech-logo.png?alt=media&token=54c5b270-f5c0-4267-b587-b7aa1da7edb9">
 
     <style>
+      section.probootstrap-section {
+        padding: 3em 0;
+        position: relative;
+        z-index: 2;
+      }
       .probootstrap-block-image img {
         max-width: 100%;
         height: 260px;
@@ -53,6 +58,13 @@
         color: gray;
         font-weight: bolder;
         font-size: larger;
+      }
+      #projects p.dark {
+        height: 170px;
+      }
+      a {
+        color: #f54ea2;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -71,8 +83,8 @@
             <li class="active"><a href="/">Home</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="extra-text visible-xs">
             <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -110,9 +122,9 @@
 
 
   <section id="next-section">
-    <div class="container-fluid" id="team">
+    <div class="container-fluid container" id="team">
       <div class="row">
-        <div class="col-lg-12 col-md-12 section-heading probootstrap-animate">
+        <div class="col-lg-12 col-md-12 section-heading probootstrap-animate mt30">
           <h1 style="color: #f54ea2; font-size: 7vh">Team</h1>
         </div>
       </div>
@@ -191,65 +203,6 @@
   </section>
 
   <!-- START: section -->
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 mb70 section-heading probootstrap-animate">
-          <h2>Our Services</h2>
-          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-        </div>
-      </div>
-      <div class="row mb70">
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-box">
-              <div class="icon text-center"><i class="icon-tools2"></i></div>
-              <h3>Interface Design</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              <ul class="text-left with-icon colored">
-                <li><i class="icon-radio-checked"></i> <span>A small river named Duden</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Place and supplie</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Roasted parts of sentences</span></li>
-              </ul>
-          </div>
-        </div>
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-box">
-              <div class="icon text-center"><i class="icon-desktop"></i></div>
-              <h3>User Experience</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              <ul class="text-left with-icon colored">
-                <li><i class="icon-radio-checked"></i> <span>A small river named Duden</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Place and supplie</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Roasted parts of sentences</span></li>
-              </ul>
-          </div>
-        </div>
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-box">
-              <div class="icon text-center"><i class="icon-lightbulb"></i></div>
-              <h3>Product Strategy</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              <ul class="text-left with-icon colored">
-                <li><i class="icon-radio-checked"></i> <span>A small river named Duden</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Place and supplie</span></li>
-                <li><i class="icon-radio-checked"></i> <span>Roasted parts of sentences</span></li>
-              </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 probootstrap-animate">
-          <p class="text-center">
-            <a href="#" class="btn btn-primary btn-lg btn-block" role="button">View All Services</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END: section -->
-
-
-  <!-- START: section -->
   <section class="probootstrap-section probootstrap-section-colored">
     <div class="container" id="projects">
       <div class="row">
@@ -326,50 +279,100 @@
 
 
   <!-- START: section -->
+  <section class="probootstrap-section">
+    <div class="container" id="services">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 mb30 section-heading probootstrap-animate">
+          <h1 style="color: #f54ea2; font-size: 7vh">Our Services</h1>
+          <p class="lead">Here are some examples of how Atila can help you.</p>
+        </div>
+      </div>
+      <div class="row mb30">
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-box">
+            <div class="icon text-center"><i class="icon-tools2"></i></div>
+            <h3>Software and Hardware Engineering</h3>
+            <p>We build software and hardware products that meet your needs</p>
+            <ul class="text-left with-icon colored">
+              <li><i class="icon-radio-checked"></i> <span>Web development</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Mobile App development</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Hardware prototyping</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-box">
+            <div class="icon text-center"><i class="icon-desktop"></i></div>
+            <h3>Digital Marketing</h3>
+            <p>We create effective marketing campaigns to help grow your business</p>
+            <ul class="text-left with-icon colored">
+              <li><i class="icon-radio-checked"></i> <span>Facebook, Instagram and Google Ads</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Search Engine Optimization</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Write blog posts and produce Youtube Videos</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-box">
+            <div class="icon text-center"><i class="icon-lightbulb"></i></div>
+            <h3>Product and Business Strategy</h3>
+            <p>Useful consulting advice and tactics on how to improve or start your business</p>
+            <ul class="text-left with-icon colored">
+              <li><i class="icon-radio-checked"></i> <span>Data analytics to better understand users</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Industry and economic analysis on factors that affect your business</span></li>
+              <li><i class="icon-radio-checked"></i> <span>Financial modelling and budgeting</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--<div class="row">-->
+        <!--<div class="col-md-4 col-md-offset-4 probootstrap-animate">-->
+          <!--<p class="text-center">-->
+            <!--<a href="#" class="btn btn-primary btn-lg btn-block" role="button">View All Services</a>-->
+          <!--</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </section>
+  <!-- END: section -->
+
+  <!-- START: section -->
   <section class="probootstrap-section probootstrap-section-dark">
-    <div class="container">
+    <div class="container" id="contact">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 section-heading mb50 text-center probootstrap-animate">
-          <h2>More Benefits</h2>
-          <p class="lead">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        </div>
+        <h1>Contact Us</h1>
+        <h3>Email us at <a>info@atilaca</a></h3>
+        <h3><a href="http://m.me/atilatech1" target="_blank">Message us on fb</a></h3>
+        <h3><a href="http://instagram.com/atilatech" target="_blank">Message us on Instagram</a></h3>
+        <!-- todo: message us on WhatsApp <h3>Message us on fb</h3>-->
       </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-heart2"></i> <span>We bring emotion</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
+
+      <!--<div class="row mb60">
+        <div class="col-md-8 col-md-offset-2 probootstrap-animate">
+          <form action="#" method="post" class="probootstrap-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
+            </div>
+          </form>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-rocket"></i> <span>We guide companies</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-image"></i> <span>We design extraordinary</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-        </div>
-        <div class="clearfix visible-md-block"></div>
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-briefcase"></i> <span>We bring emotion</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-chat"></i> <span>We guide companies</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
-          <h3 class="heading-with-icon"><i class="icon-colours"></i> <span>We design extraordinary</span></h3>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-      </div>
+
+      </div>-->
     </div>
   </section>
   <!-- END: section -->
@@ -377,94 +380,6 @@
   <!-- START: footer -->
   <footer role="contentinfo" class="probootstrap-footer">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>About Format</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p><a href="#" class="link-with-icon">Learn More <i class=" icon-chevron-right"></i></a></p>
-          </div>
-          <div class="probootstrap-footer-widget">
-            <h3>Connect With Us</h3>
-            <ul class="probootstrap-footer-social">
-              <li><a href=""><i class="icon-twitter"></i></a></li>
-              <li><a href=""><i class="icon-facebook"></i></a></li>
-              <li><a href=""><i class="icon-instagram2"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>Popular Products</h3>
-            <ul class="probootstrap-product-list">
-              <li class="mb20">
-                <a href="#">
-                  <figure><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                    <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                  </div>
-                </a>
-              </li>
-              <li class="mb20">
-                <a href="#">
-                  <figure><img src="img/img_4.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                    <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                  </div>
-                </a>
-              </li>
-              <li class="mb20">
-                <a href="#">
-                  <figure><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                    <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="probootstrap-footer-widget">
-            <h3>Recent Post</h3>
-            <ul class="probootstrap-blog-list">
-              <li>
-                <a href="#">
-                  <figure><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure><img src="img/img_2.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure><img src="img/img_3.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
-                  <div class="text">
-                    <h4>River named Duden flows</h4>
-                    <p>A small river named Duden flows by their place</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <div class="row mt40">
         <div class="col-md-12 text-center">
           <p>
