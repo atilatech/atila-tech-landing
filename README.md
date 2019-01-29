@@ -1,5 +1,20 @@
 # AtilaTechLanding
 
+
+## Prerequisites
+
+- Install [NPM](https://www.npmjs.com/)
+- Install [Angular](https://angular.io/) globally `npm install -g @angular@<version_specified_in_package.json>`
+- Install [Angular CLI](https://cli.angular.io/) globally: `npm install -g @angular/cli`
+
+
+## Getting Started
+
+- `npm install` to install Node package dependencies
+- `ng serve --open` to run the development server
+- navigate your browser to `http://localhost:4200`
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
