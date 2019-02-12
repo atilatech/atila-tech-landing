@@ -61,8 +61,17 @@
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
+
+
+
     var form = event.target;
     var data = getFormData(form);         // get the values submitted in the form
+
+    thankYouLoading = form.querySelector(".thankyou_loading");
+
+    if (thankYouLoading && thankYouLoading.style) {
+      thankYouLoading.style.display = "block";
+    }
 
     /* OPTION: Remove this comment to enable SPAM prevention, see README.md
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
@@ -72,8 +81,10 @@
 
     if( data.email && !validEmail(data.email) ) {   // if email is not valid show error
       var invalidEmail = form.querySelector(".email-invalid");
+      var thankYouLoading = form.querySelector(".thankyou_loading");
       if (invalidEmail) {
         invalidEmail.style.display = "block";
+        thankYouLoading.style.display = "block";
         return false;
       }
     } else {
@@ -91,8 +102,10 @@
           formElements.style.display = "none"; // hide form
         }
         var thankYouMessage = form.querySelector(".thankyou_message");
+        var thankYouLoading = form.querySelector(".thankyou_loading");
         if (thankYouMessage) {
           thankYouMessage.style.display = "block";
+          thankYouLoading.style.display = "none";
         }
         return;
       };
