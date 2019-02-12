@@ -374,32 +374,50 @@
       <!-- todo: message us on WhatsApp <h3>Message us on fb</h3>-->
     </div>
     <!--todo send contact form from webpage-->
-    <!--<div class="row mb60">
-      <div class="col-md-8 col-md-offset-2 probootstrap-animate">
-        <form action="#" method="post" class="probootstrap-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" id="name" name="name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" class="form-control" id="subject" name="subject">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
-          </div>
-        </form>
+    <!--&lt;!&ndash;<div class="row mb60">-->
+      <div class="col-md-8 col-md-offset-2 probootstrap-animate"><form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+                                                                       action="https://script.google.com/macros/s/AKfycbz-KUtAK4P51p-0bWJCne5USIlyCbLtwSSMpSBIK0BxkMFUG0w/exec">
+        <!-- change the form action to your script url -->
+
+        <div class="form-elements">
+          <fieldset class="pure-group">
+            <label for="name">Name: </label>
+            <input id="name" name="name" placeholder="What your Mom calls you" />
+          </fieldset>
+
+          <fieldset class="pure-group">
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="10"
+                      placeholder="Tell us what's on your mind..."></textarea>
+          </fieldset>
+
+          <fieldset class="pure-group">
+            <label for="email"><em>Your</em> Email Address:</label>
+            <input id="email" name="email" type="email" value=""
+                   required placeholder="your.name@email.com"/>
+            <span class="email-invalid" style="display:none">
+          Must be a valid email address</span>
+          </fieldset>
+
+          <fieldset class="pure-group">
+            <label for="color">Favourite Color: </label>
+            <input id="color" name="color" placeholder="green" />
+          </fieldset>
+
+          <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+        </div>
+
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div class="thankyou_message" style="display:none;">
+          <h2><em>Thanks</em> for contacting us!
+            We will get back to you soon!</h2>
+        </div>
+
+      </form>
       </div>
 
-    </div>-->
+    </div>
   </div>
 </section>
 <!-- END: section: Contact -->
