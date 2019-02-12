@@ -17,3 +17,12 @@ just_deploy() {
  aws s3 sync dist/ s3://tech.atila.ca;
  aws cloudfront create-invalidation --distribution-id EZ8XIMBLMQKJN --paths "/*";
 }
+
+deploy_alternate () {
+ git add . ;
+ git commit -m "$1" ;
+ git push ;
+
+ aws s3 sync home_alternate/ s3://tech.atila.ca;
+ aws cloudfront create-invalidation --distribution-id EZ8XIMBLMQKJN --paths "/*";
+}
