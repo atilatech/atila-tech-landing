@@ -92,6 +92,11 @@
     #honeypot {
       display: none; /*makes the field not visible to humans*/
     }
+
+    form label {
+      color: #f54ea2;
+      font-weight: 200;
+    }
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" style="position: relative">
@@ -369,6 +374,9 @@
 
 <!-- START: section: Contact -->
 <section class="probootstrap-section probootstrap-section-dark">
+
+  <!--for the contact form-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <div class="container" id="contact">
     <div class="row">
       <h1>Contact Us</h1>
@@ -379,8 +387,10 @@
     </div>
     <!--todo send contact form from webpage-->
     <!--&lt;!&ndash;<div class="row mb60">-->
-      <div class="col-md-8 col-md-offset-2 probootstrap-animate"><form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-                                                                       action="https://script.google.com/macros/s/AKfycbz-KUtAK4P51p-0bWJCne5USIlyCbLtwSSMpSBIK0BxkMFUG0w/exec">
+      <div class="col-md-8 col-md-offset-2">
+        <form class="gform pure-form pure-form-stacked" method="POST"
+              data-email="example@email.net"
+              action="https://script.google.com/macros/s/AKfycbz-KUtAK4P51p-0bWJCne5USIlyCbLtwSSMpSBIK0BxkMFUG0w/exec">
         <!-- change the form action to your script url -->
 
         <!--input id must be honeypot or else it wont work-->
@@ -389,30 +399,31 @@
 
         <div class="form-elements">
           <fieldset class="pure-group">
-            <label for="name">Name: </label>
-            <input id="name" name="name" placeholder="What your Mom calls you" />
+            <label for="name">Full Name: </label>
+            <input id="name" name="name" placeholder="First and Last name" class="pure-u-1 pure-u-md-1-3"/>
           </fieldset>
 
           <fieldset class="pure-group">
             <label for="message">Message: </label>
-            <textarea id="message" name="message" rows="10"
-                      placeholder="Tell us what's on your mind..."></textarea>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="How can Atila Help you?" class="pure-u-1 pure-u-md-1-3"
+            ></textarea>
           </fieldset>
 
           <fieldset class="pure-group">
-            <label for="email"><em>Your</em> Email Address:</label>
+            <label for="email">Your Email Address:</label>
             <input id="email" name="email" type="email" value=""
-                   required placeholder="your.name@email.com"/>
+                   required placeholder="your.name@email.com" class="pure-u-1 pure-u-md-1-3"/>
             <span class="email-invalid" style="display:none">
           Must be a valid email address</span>
           </fieldset>
 
           <fieldset class="pure-group">
             <label for="color">Favourite Color: </label>
-            <input id="color" name="color" placeholder="green" />
+            <input id="color" name="color" placeholder="green" class="pure-u-1 pure-u-md-1-3" />
           </fieldset>
 
-          <button class="button-success pure-button button-xlarge">
+          <button class="button-success pure-button button-xlarge green" style="background-color: #f54ea2;color: white;">
             <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
         </div>
 
