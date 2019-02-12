@@ -23,6 +23,6 @@ deploy_alternate () {
  git commit -m "$1" ;
  git push ;
 
- aws s3 sync home_alternate/ s3://tech.atila.ca;
+ aws s3 cp home_alternate s3://tech.atila.ca/ --recursive --exclude ".gitignore" --exclude "README.txt";
  aws cloudfront create-invalidation --distribution-id EZ8XIMBLMQKJN --paths "/*";
 }
